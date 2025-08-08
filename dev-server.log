@@ -1,0 +1,395 @@
+
+> cowl@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.1.0
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 1239ms
+ ○ Compiling / ...
+ ✓ Compiled / in 997ms (658 modules)
+ GET / 200 in 1231ms
+ ✓ Compiled in 240ms (329 modules)
+ ✓ Compiled /api/auth/[...nextauth] in 363ms (882 modules)
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s0\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \\"s0\\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \\"s0\\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s0\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s0\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ GET /api/auth/session 200 in 1014ms
+ ✓ Compiled /auth/signin in 284ms (891 modules)
+ GET /auth/signin 200 in 415ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s1\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \\"s1\\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \\"s1\\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s1\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s1\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ GET /api/auth/session 200 in 171ms
+ GET /auth/signin 200 in 13ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s2\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \\"s2\\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \\"s2\\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s2\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "42P05", message: "prepared statement \"s2\" already exists", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ GET /api/auth/session 200 in 38ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+ GET /api/auth/session 200 in 42ms
+ ✓ Compiled /dashboard in 286ms (935 modules)
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ GET /dashboard 200 in 371ms
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+ GET /api/auth/session 200 in 217ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ GET /auth/signin 200 in 22ms
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+ GET /api/auth/session 200 in 27ms
+ GET /dashboard 200 in 25ms
+ GET /auth/signin 200 in 21ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+ GET /api/auth/session 200 in 29ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+ GET /api/auth/session 200 in 21ms
+ ✓ Compiled /api/wallets in 201ms (948 modules)
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+ GET /dashboard 200 in 272ms
+prisma:query SELECT "public"."wallets"."id", "public"."wallets"."name", "public"."wallets"."description", "public"."wallets"."inviteCode", "public"."wallets"."createdAt", "public"."wallets"."updatedAt", "public"."wallets"."isActive", COALESCE("aggr_selection_0_Payment"."_aggr_count_payments", 0) AS "_aggr_count_payments" FROM "public"."wallets" LEFT JOIN (SELECT "public"."payments"."walletId", COUNT(*) AS "_aggr_count_payments" FROM "public"."payments" WHERE 1=1 GROUP BY "public"."payments"."walletId") AS "aggr_selection_0_Payment" ON ("public"."wallets"."id" = "aggr_selection_0_Payment"."walletId") WHERE (EXISTS(SELECT "t0"."walletId" FROM "public"."wallet_members" AS "t0" WHERE ("t0"."userId" = $1 AND ("public"."wallets"."id") = ("t0"."walletId") AND "t0"."walletId" IS NOT NULL)) AND "public"."wallets"."isActive" = $2) ORDER BY "public"."wallets"."updatedAt" DESC OFFSET $3
+ GET /api/wallets 200 in 306ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+prisma:query SELECT "public"."wallets"."id", "public"."wallets"."name", "public"."wallets"."description", "public"."wallets"."inviteCode", "public"."wallets"."createdAt", "public"."wallets"."updatedAt", "public"."wallets"."isActive", COALESCE("aggr_selection_0_Payment"."_aggr_count_payments", 0) AS "_aggr_count_payments" FROM "public"."wallets" LEFT JOIN (SELECT "public"."payments"."walletId", COUNT(*) AS "_aggr_count_payments" FROM "public"."payments" WHERE 1=1 GROUP BY "public"."payments"."walletId") AS "aggr_selection_0_Payment" ON ("public"."wallets"."id" = "aggr_selection_0_Payment"."walletId") WHERE (EXISTS(SELECT "t0"."walletId" FROM "public"."wallet_members" AS "t0" WHERE ("t0"."userId" = $1 AND ("public"."wallets"."id") = ("t0"."walletId") AND "t0"."walletId" IS NOT NULL)) AND "public"."wallets"."isActive" = $2) ORDER BY "public"."wallets"."updatedAt" DESC OFFSET $3
+ GET /api/wallets 200 in 30ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+prisma:query SELECT "public"."wallets"."id", "public"."wallets"."name", "public"."wallets"."description", "public"."wallets"."inviteCode", "public"."wallets"."createdAt", "public"."wallets"."updatedAt", "public"."wallets"."isActive", COALESCE("aggr_selection_0_Payment"."_aggr_count_payments", 0) AS "_aggr_count_payments" FROM "public"."wallets" LEFT JOIN (SELECT "public"."payments"."walletId", COUNT(*) AS "_aggr_count_payments" FROM "public"."payments" WHERE 1=1 GROUP BY "public"."payments"."walletId") AS "aggr_selection_0_Payment" ON ("public"."wallets"."id" = "aggr_selection_0_Payment"."walletId") WHERE (EXISTS(SELECT "t0"."walletId" FROM "public"."wallet_members" AS "t0" WHERE ("t0"."userId" = $1 AND ("public"."wallets"."id") = ("t0"."walletId") AND "t0"."walletId" IS NOT NULL)) AND "public"."wallets"."isActive" = $2) ORDER BY "public"."wallets"."updatedAt" DESC OFFSET $3
+ GET /api/wallets 500 in 27ms
+prisma:query SELECT "public"."users"."id", "public"."users"."name", "public"."users"."email", "public"."users"."emailVerified", "public"."users"."image", "public"."users"."createdAt", "public"."users"."updatedAt" FROM "public"."users" WHERE "public"."users"."id" IN ($1) OFFSET $2
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s7\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s7\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s7\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s7\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s7\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ GET /api/auth/session 200 in 390ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ GET /api/wallets 401 in 77ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ POST /api/wallets 401 in 45ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ POST /api/wallets 401 in 61ms
+prisma:query SELECT "public"."Session"."id", "public"."Session"."sessionToken", "public"."Session"."userId", "public"."Session"."expires" FROM "public"."Session" WHERE ("public"."Session"."sessionToken" = $1 AND 1=1) LIMIT $2 OFFSET $3
+[next-auth][error][adapter_error_getSessionAndUser] 
+https://next-auth.js.org/errors#adapter_error_getsessionanduser 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) {
+  message: '\n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })',
+  stack: 'PrismaClientUnknownRequestError: \n' +
+    'Invalid `prisma.session.findUnique()` invocation:\n' +
+    '\n' +
+    '\n' +
+    'Error occurred during query execution:\n' +
+    'ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \\"s6\\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })\n' +
+    '    at ri.handleRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:7649)\n' +
+    '    at ri.handleAndLogRequestError (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6784)\n' +
+    '    at ri.request (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:121:6491)\n' +
+    '    at async l (/home/imanishi/Cowl/node_modules/@prisma/client/runtime/library.js:130:9812)\n' +
+    '    at async getSessionAndUser (webpack-internal:///(rsc)/./node_modules/@auth/prisma-adapter/index.js:29:36)',
+  name: 'PrismaClientUnknownRequestError'
+}
+[next-auth][error][SESSION_ERROR] 
+https://next-auth.js.org/errors#session_error 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false }) [Error [GetSessionAndUserError]: 
+Invalid `prisma.session.findUnique()` invocation:
+
+
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "26000", message: "prepared statement \"s6\" does not exist", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })] {
+  code: undefined
+}
+ POST /api/wallets 401 in 52ms
+ ✓ Compiled in 211ms (610 modules)
+ GET /dashboard 200 in 41ms
+ ✓ Compiled in 75ms (599 modules)
+ GET /dashboard 200 in 20ms
+[?25h

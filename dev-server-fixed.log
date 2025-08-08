@@ -1,0 +1,276 @@
+
+> cowl@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.1.0
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 1426ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1921ms (658 modules)
+ GET / 200 in 2294ms
+ ✓ Compiled in 243ms (329 modules)
+ ○ Compiling /auth/signin ...
+ ✓ Compiled /auth/signin in 586ms (653 modules)
+ GET /auth/signin 200 in 656ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 566ms (891 modules)
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/session'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 677ms (1133 modules)
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/providers'
+}
+ GET /auth/signin 200 in 331ms
+ GET /auth/signin 200 in 8ms
+ GET /api/auth/session 500 in 1703ms
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/session'
+}
+ GET /api/auth/providers 500 in 390ms
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/_log'
+}
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/error'
+}
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/_log'
+}
+ GET /api/auth/session 500 in 219ms
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- /home/imanishi/Cowl/node_modules/@prisma/client/default.js
+- /home/imanishi/Cowl/.next/server/app/api/auth/[...nextauth]/route.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/require.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/load-components.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/utils.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/options.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/swc/index.js
+- /home/imanishi/Cowl/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/config.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/next.js
+- /home/imanishi/Cowl/node_modules/next/dist/server/lib/start-server.js
+    at @prisma/client (.next/server/app/api/auth/[...nextauth]/route.js:22:18)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.ts:5:72)
+    at (rsc)/./src/lib/prisma.ts (.next/server/app/api/auth/[...nextauth]/route.js:251:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/lib/auth.ts:7:65)
+    at (rsc)/./src/lib/auth.ts (.next/server/app/api/auth/[...nextauth]/route.js:240:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./src/app/api/auth/[...nextauth]/route.ts:8:67)
+    at (rsc)/./src/app/api/auth/[...nextauth]/route.ts (.next/server/app/api/auth/[...nextauth]/route.js:229:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2Fhome%2Fimanishi%2FCowl%2Fsrc%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fimanishi%2FCowl&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/app/api/auth/[...nextauth]/route.js:198:1)
+    at __webpack_require__ (.next/server/webpack-runtime.js:33:43)
+    at __webpack_exec__ (.next/server/app/api/auth/[...nextauth]/route.js:261:39)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:413)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:163:21)
+    at <unknown> (.next/server/app/api/auth/[...nextauth]/route.js:262:47)
+    at Object.<anonymous> (.next/server/app/api/auth/[...nextauth]/route.js:265:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/_log'
+}
+ POST /api/auth/_log 500 in 230ms
+ GET /api/auth/error 500 in 219ms
+ POST /api/auth/_log 500 in 212ms
+ POST /api/auth/_log 500 in 210ms

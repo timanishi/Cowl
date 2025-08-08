@@ -1,0 +1,140 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts            Account[]
+  sessions            Session[]
+  walletMembers       WalletMember[]
+  payments            Payment[]
+  paymentParticipants PaymentParticipant[]
+  settlementsFrom     Settlement[] @relation("SettlementFrom")
+  settlementsTo       Settlement[] @relation("SettlementTo")
+
+  @@map("users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Wallet {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  inviteCode  String   @unique @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  isActive    Boolean  @default(true)
+
+  members     WalletMember[]
+  payments    Payment[]
+  settlements Settlement[]
+
+  @@map("wallets")
+}
+
+model WalletMember {
+  id       String @id @default(cuid())
+  userId   String
+  walletId String
+  role     String @default("member")
+  joinedAt DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wallet Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, walletId])
+  @@map("wallet_members")
+}
+
+model Payment {
+  id          String   @id @default(cuid())
+  walletId    String
+  payerId     String
+  amount      Int
+  description String
+  category    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  wallet      Wallet            @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  payer       User              @relation(fields: [payerId], references: [id])
+  participants PaymentParticipant[]
+
+  @@map("payments")
+}
+
+model PaymentParticipant {
+  id        String @id @default(cuid())
+  paymentId String
+  userId    String
+  amount    Int
+
+  payment Payment @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id])
+
+  @@unique([paymentId, userId])
+  @@map("payment_participants")
+}
+
+model Settlement {
+  id          String   @id @default(cuid())
+  walletId    String
+  fromUserId  String
+  toUserId    String
+  amount      Int
+  isCompleted Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  completedAt DateTime?
+
+  wallet   Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  fromUser User   @relation("SettlementFrom", fields: [fromUserId], references: [id])
+  toUser   User   @relation("SettlementTo", fields: [toUserId], references: [id])
+
+  @@map("settlements")
+}

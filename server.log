@@ -1,0 +1,143 @@
+
+> cowl@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.1.0
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 1109ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1895ms (657 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /_next/static/webpack/cb8a9b683fd137e4.webpack.hot-update.json 404 in 2080ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 725ms (884 modules)
+ GET /api/auth/error 200 in 706ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /_next/static/webpack/cb8a9b683fd137e4.webpack.hot-update.json 404 in 787ms
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+ GET /api/auth/error 200 in 324ms
+ GET /api/auth/session 200 in 139ms
+ ✓ Compiled /dashboard in 441ms (930 modules)
+ GET /dashboard 200 in 521ms
+ ✓ Compiled / in 141ms (932 modules)
+ GET / 200 in 198ms
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 198ms
+ ✓ Compiled /auth/signin in 184ms (939 modules)
+ GET /auth/signin 200 in 221ms
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 52ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /dashboard 200 in 14ms
+ GET /api/auth/session 200 in 26ms
+ ✓ Compiled /api/wallets in 293ms (952 modules)
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets 200 in 453ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets 200 in 70ms
+ ✓ Compiled /wallets/[id] in 277ms (978 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 622ms
+ ✓ Compiled /api/wallets/[id] in 120ms (980 modules)
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 592ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 56ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 87ms
+ ✓ Compiled /api/payments in 190ms (982 modules)
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ POST /api/payments 201 in 437ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 101ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ POST /api/payments 201 in 178ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 111ms
+ GET /dashboard 200 in 23ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets 200 in 51ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets 200 in 49ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 18ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 132ms
+ ✓ Compiled in 321ms (361 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 50ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 10ms
+ ✓ Compiled in 103ms (361 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 25ms
+ ✓ Compiled in 97ms (361 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 25ms
+ ✓ Compiled in 99ms (361 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 24ms
+ ✓ Compiled in 298ms (728 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 71ms
+ ✓ Compiled /api/wallets/[id]/settlement in 279ms (964 modules)
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 819ms
+ ✓ Compiled /wallets/[id]/settlement in 202ms (977 modules)
+ GET /wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 579ms
+ ✓ Compiled /api/auth/[...nextauth] in 108ms (629 modules)
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+ GET /api/auth/session 200 in 173ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 263ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 109ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 62ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 26ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 47ms
+ ✓ Compiled /api/wallets/[id] in 107ms (631 modules)
+[next-auth][warn][DEBUG_ENABLED] 
+https://next-auth.js.org/warnings#debug_enabled
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 257ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 42ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 38ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 111ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 18ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 106ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ POST /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 62ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 105ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 19ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 107ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 19ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp/settlement 200 in 110ms
+ GET /wallets/cme2c6tj80000aibbvpteu7yp 200 in 17ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 122ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 152ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 199ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/auth/session 200 in 179ms
+[next-auth][debug][adapter_getSessionAndUser] { args: [ '96495920-8512-4835-8424-453b39301900' ] }
+ GET /api/wallets/cme2c6tj80000aibbvpteu7yp 200 in 179ms
+prisma:error Error in PostgreSQL connection: Error { kind: Io, cause: Some(Os { code: 104, kind: ConnectionReset, message: "Connection reset by peer" }) }
