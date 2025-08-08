@@ -189,7 +189,7 @@ export default function AddPaymentModal({
                 value={formData.description}
                 onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
                 placeholder="例: ランチ代"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 required
               />
             </div>
@@ -206,7 +206,7 @@ export default function AddPaymentModal({
                 placeholder="0"
                 min="0"
                 step="1"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 required
               />
             </div>
@@ -219,7 +219,7 @@ export default function AddPaymentModal({
               <select
                 value={formData.category}
                 onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value }))}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
               >
                 <option value="">選択してください</option>
                 {categories.map(category => (
@@ -236,7 +236,7 @@ export default function AddPaymentModal({
               <select
                 value={formData.payerId}
                 onChange={(e) => setFormData(prev => ({ ...prev, payerId: e.target.value }))}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 required
               >
                 {members.map(member => (
@@ -310,7 +310,7 @@ export default function AddPaymentModal({
                               placeholder="0"
                               min="0"
                               step="1"
-                              className="w-20 text-sm border border-gray-300 rounded px-2 py-1"
+                              className="w-20 text-sm border border-gray-300 rounded px-2 py-1 text-gray-900"
                             />
                           )}
                         </div>

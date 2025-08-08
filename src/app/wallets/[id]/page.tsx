@@ -182,15 +182,15 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-700">メンバー数</span>
-                  <span className="font-medium">{wallet.members.length}人</span>
+                  <span className="font-medium text-gray-900">{wallet.members.length}人</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-700">支払い件数</span>
-                  <span className="font-medium">{wallet.payments?.length || 0}件</span>
+                  <span className="font-medium text-gray-900">{wallet.payments?.length || 0}件</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-700">作成日</span>
-                  <span className="font-medium text-sm">{formatDate(wallet.createdAt)}</span>
+                  <span className="font-medium text-sm text-gray-900">{formatDate(wallet.createdAt)}</span>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
                 <div className="mb-4 p-3 bg-blue-50 rounded-lg">
                   <p className="text-sm text-gray-700 mb-2">招待コード:</p>
                   <div className="flex items-center space-x-2">
-                    <code className="text-sm bg-white px-2 py-1 rounded border flex-1">
+                    <code className="text-sm bg-white px-2 py-1 rounded border flex-1 text-gray-800">
                       {wallet.inviteCode}
                     </code>
                     <button
@@ -237,7 +237,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
                       />
                     )}
                     <div className="flex-1">
-                      <p className="font-medium text-sm">{safeUserName(member.user)}</p>
+                      <p className="font-medium text-sm text-gray-900">{safeUserName(member.user)}</p>
                       {member.role === 'owner' && (
                         <p className="text-xs text-blue-600">オーナー</p>
                       )}
@@ -314,16 +314,16 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
                               <p className="text-xs text-gray-600">
                                 {formatDate(payment.createdAt)}
                               </p>
-                              <div className="mt-2 text-xs text-gray-600">
+                              <div className="mt-2 text-xs text-gray-700">
                                 参加者: {payment.participants.map(p => safeUserName(p.user)).join(', ')}
                               </div>
                             </div>
                           </div>
                           <div className="text-right flex items-start space-x-3">
                             <div>
-                              <p className="font-semibold text-lg">{formatCurrency(payment.amount)}</p>
+                              <p className="font-semibold text-lg text-gray-900">{formatCurrency(payment.amount)}</p>
                               {payment.category && (
-                                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                                <span className="text-xs bg-gray-100 px-2 py-1 rounded text-gray-800">
                                   {payment.category}
                                 </span>
                               )}
