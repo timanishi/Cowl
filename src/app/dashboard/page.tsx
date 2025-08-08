@@ -63,7 +63,7 @@ export default function Dashboard() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">読み込み中...</p>
+          <p className="text-gray-700">読み込み中...</p>
         </div>
       </div>
     )
@@ -98,7 +98,7 @@ export default function Dashboard() {
               </div>
               <button
                 onClick={handleSignOut}
-                className="text-sm text-gray-500 hover:text-gray-700"
+                className="text-sm text-gray-600 hover:text-gray-800"
               >
                 ログアウト
               </button>
@@ -133,7 +133,7 @@ export default function Dashboard() {
               <h3 className="text-lg font-medium text-gray-900 mb-2">
                 ウォレットがありません
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-700 mb-6">
                 最初のウォレットを作成して、友達との精算を始めましょう
               </p>
               <button 
@@ -154,11 +154,11 @@ export default function Dashboard() {
                       {wallet.name}
                     </h3>
                     {wallet.description && (
-                      <p className="text-gray-600 text-sm mb-2">
+                      <p className="text-gray-700 text-sm mb-2">
                         {wallet.description}
                       </p>
                     )}
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-4 text-sm text-gray-600">
                       <span>{wallet._count.payments}件の支払い</span>
                       <span>{wallet.members.length}人のメンバー</span>
                     </div>

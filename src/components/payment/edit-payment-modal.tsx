@@ -275,10 +275,10 @@ export default function EditPaymentModal({
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 支払者
               </label>
-              <div className="w-full border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 text-gray-600">
+              <div className="w-full border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 text-gray-800">
                 {payment.payer.name}
               </div>
-              <p className="text-xs text-gray-500 mt-1">支払者は編集できません</p>
+              <p className="text-xs text-gray-600 mt-1">支払者は編集できません</p>
             </div>
 
             {/* Split Type */}
@@ -295,7 +295,7 @@ export default function EditPaymentModal({
                     onChange={(e) => setSplitType(e.target.value as 'equal')}
                     className="mr-2"
                   />
-                  <span className="text-sm">均等割り</span>
+                  <span className="text-sm text-gray-800">均等割り</span>
                 </label>
                 <label className="flex items-center">
                   <input
@@ -305,7 +305,7 @@ export default function EditPaymentModal({
                     onChange={(e) => setSplitType(e.target.value as 'custom')}
                     className="mr-2"
                   />
-                  <span className="text-sm">カスタム分割</span>
+                  <span className="text-sm text-gray-800">カスタム分割</span>
                 </label>
               </div>
             </div>
@@ -327,13 +327,13 @@ export default function EditPaymentModal({
                           onChange={() => handleMemberToggle(member.user.id)}
                           className="mr-3"
                         />
-                        <span className="text-sm">{member.user.name}</span>
+                        <span className="text-sm text-gray-800">{member.user.name}</span>
                       </label>
                       
                       {isSelected && (
                         <div className="ml-3">
                           {splitType === 'equal' ? (
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-gray-700">
                               ¥{getParticipantAmount(member.user.id).toLocaleString()}
                             </span>
                           ) : (

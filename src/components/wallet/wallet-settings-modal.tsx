@@ -177,7 +177,7 @@ export default function WalletSettingsModal({
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     メンバー数
                   </label>
-                  <div className="text-gray-600">
+                  <div className="text-gray-700">
                     {wallet.members.length}人のメンバー
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function WalletSettingsModal({
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     招待コード
                   </label>
-                  <div className="text-gray-600 text-sm">
+                  <div className="text-gray-700 text-sm">
                     招待コードは変更できません。新しいメンバーを招待するには、
                     ウォレット詳細ページから招待リンクを共有してください。
                   </div>
@@ -219,7 +219,7 @@ export default function WalletSettingsModal({
               {isOwner && (
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <h3 className="text-lg font-semibold text-red-600 mb-2">危険な操作</h3>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <p className="text-sm text-gray-700 mb-4">
                     ウォレットを削除すると、すべての支払い記録と精算履歴が永久に削除されます。
                     この操作は元に戻せません。
                   </p>
@@ -243,7 +243,7 @@ export default function WalletSettingsModal({
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">本当に削除しますか？</h3>
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-sm text-gray-700 mb-6">
                 「{wallet.name}」を削除します。この操作は元に戻せません。
                 すべての支払い記録と精算履歴が永久に削除されます。
               </p>

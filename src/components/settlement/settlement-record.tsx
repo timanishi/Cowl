@@ -140,7 +140,7 @@ export default function SettlementRecord({ record, onStatusChange }: SettlementR
         </div>
 
         {/* Date */}
-        <div className="flex-shrink-0 text-sm text-gray-500">
+        <div className="flex-shrink-0 text-sm text-gray-600">
           {new Date(record.createdAt).toLocaleDateString('ja-JP')}
           {record.completedAt && (
             <div className="text-xs text-green-600">

@@ -181,15 +181,15 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
               <h3 className="font-semibold text-gray-900 mb-4">ウォレット情報</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">メンバー数</span>
+                  <span className="text-gray-700">メンバー数</span>
                   <span className="font-medium">{wallet.members.length}人</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">支払い件数</span>
+                  <span className="text-gray-700">支払い件数</span>
                   <span className="font-medium">{wallet.payments?.length || 0}件</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">作成日</span>
+                  <span className="text-gray-700">作成日</span>
                   <span className="font-medium text-sm">{formatDate(wallet.createdAt)}</span>
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
               
               {showInviteCode && (
                 <div className="mb-4 p-3 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-gray-600 mb-2">招待コード:</p>
+                  <p className="text-sm text-gray-700 mb-2">招待コード:</p>
                   <div className="flex items-center space-x-2">
                     <code className="text-sm bg-white px-2 py-1 rounded border flex-1">
                       {wallet.inviteCode}
@@ -281,7 +281,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
                     </svg>
                   </div>
                   <h4 className="font-medium text-gray-900 mb-2">支払いがありません</h4>
-                  <p className="text-gray-600 mb-4">最初の支払いを記録しましょう</p>
+                  <p className="text-gray-700 mb-4">最初の支払いを記録しましょう</p>
                   <button 
                     onClick={() => setShowAddPayment(true)}
                     className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
@@ -308,13 +308,13 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
                             )}
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900">{payment.description}</h4>
-                              <p className="text-sm text-gray-600">
+                              <p className="text-sm text-gray-700">
                                 {safeUserName(payment.payer)}が支払い
                               </p>
-                              <p className="text-xs text-gray-500">
+                              <p className="text-xs text-gray-600">
                                 {formatDate(payment.createdAt)}
                               </p>
-                              <div className="mt-2 text-xs text-gray-500">
+                              <div className="mt-2 text-xs text-gray-600">
                                 参加者: {payment.participants.map(p => safeUserName(p.user)).join(', ')}
                               </div>
                             </div>

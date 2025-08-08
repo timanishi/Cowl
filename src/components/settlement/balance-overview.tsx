@@ -20,7 +20,7 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
         <div className="text-3xl font-bold text-indigo-600">
           {formatCurrency(totalExpenses)}
         </div>
-        <p className="text-sm text-gray-600 mt-2">
+        <p className="text-sm text-gray-700 mt-2">
           {memberBalances.length}人で分担
         </p>
       </div>
@@ -29,7 +29,7 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
       <div className="bg-white rounded-lg shadow-sm">
         <div className="p-6 border-b">
           <h3 className="text-lg font-semibold text-gray-900">メンバー別収支</h3>
-          <p className="text-sm text-gray-600 mt-1">
+          <p className="text-sm text-gray-700 mt-1">
             各メンバーの支払い状況と収支バランス
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
                     )}
                     <div>
                       <h4 className="font-medium text-gray-900">{member.name}</h4>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-gray-600">
                         {member.paymentCount}回支払い・{member.participationCount}回参加
                       </p>
                     </div>
@@ -62,10 +62,10 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
                   {/* 収支情報 */}
                   <div className="text-right">
                     <div className="space-y-1">
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-600">
                         支払い: {formatCurrency(member.totalPaid)}
                       </div>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-600">
                         負担: {formatCurrency(member.totalOwed)}
                       </div>
                       <div className={`font-semibold ${
@@ -73,7 +73,7 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
                           ? 'text-green-600' 
                           : member.balance < -0.01 
                             ? 'text-red-600' 
-                            : 'text-gray-600'
+                            : 'text-gray-700'
                       }`}>
                         {member.balance > 0.01 
                           ? `+${formatCurrency(member.balance)}` 
@@ -88,7 +88,7 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
 
                 {/* バランスバー */}
                 <div className="mt-4">
-                  <div className="flex items-center space-x-2 text-xs text-gray-600 mb-2">
+                  <div className="flex items-center space-x-2 text-xs text-gray-700 mb-2">
                     <span>支払い過多</span>
                     <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                       <div 
@@ -129,7 +129,7 @@ export default function BalanceOverview({ memberBalances, totalExpenses }: Balan
           <div className="text-sm text-red-700">支払人</div>
         </div>
         <div className="bg-gray-50 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-gray-600">
+          <div className="text-2xl font-bold text-gray-700">
             {memberBalances.filter(m => Math.abs(m.balance) <= 0.01).length}
           </div>
           <div className="text-sm text-gray-700">精算済</div>

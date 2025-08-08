@@ -138,7 +138,7 @@ export default function SettlementProposal({
       <div className="bg-white rounded-lg shadow-sm">
         <div className="p-6 border-b">
           <h3 className="text-lg font-semibold text-gray-900">送金指示</h3>
-          <p className="text-sm text-gray-600 mt-1">
+          <p className="text-sm text-gray-700 mt-1">
             以下の送金を完了すると精算が完了します
           </p>
         </div>
@@ -242,7 +242,7 @@ export default function SettlementProposal({
             className={`px-8 py-3 rounded-lg font-medium transition-colors ${
               allCompleted && !isProcessing
                 ? 'bg-green-500 text-white hover:bg-green-600'
-                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                : 'bg-gray-300 text-gray-600 cursor-not-allowed'
             }`}
           >
             {isProcessing ? '処理中...' : allCompleted ? '精算を確定する' : `残り${transactions.length - completedTransactions.size}件の送金を完了してください`}

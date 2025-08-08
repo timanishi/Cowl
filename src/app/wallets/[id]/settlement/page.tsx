@@ -138,7 +138,7 @@ export default function SettlementPage({ params }: { params: Promise<{ id: strin
           {/* ページタイトル */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">精算計算</h2>
-            <p className="text-gray-600">
+            <p className="text-gray-700">
               最終更新: {new Date(settlement.calculatedAt).toLocaleString('ja-JP')}
             </p>
           </div>
@@ -187,23 +187,23 @@ export default function SettlementPage({ params }: { params: Promise<{ id: strin
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
                 <div className="text-2xl font-bold text-blue-600">{settlement.totalMembers}</div>
-                <div className="text-sm text-gray-600">参加メンバー</div>
+                <div className="text-sm text-gray-700">参加メンバー</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-green-600">{settlement.totalPayments}</div>
-                <div className="text-sm text-gray-600">支払い回数</div>
+                <div className="text-sm text-gray-700">支払い回数</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-purple-600">
                   {settlement.settlementTransactions.length}
                 </div>
-                <div className="text-sm text-gray-600">必要送金数</div>
+                <div className="text-sm text-gray-700">必要送金数</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-indigo-600">
                   ¥{Math.round(settlement.totalExpenses / settlement.totalMembers).toLocaleString()}
                 </div>
-                <div className="text-sm text-gray-600">1人あたり平均</div>
+                <div className="text-sm text-gray-700">1人あたり平均</div>
               </div>
             </div>
           </div>
