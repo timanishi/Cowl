@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import BalanceOverview from '@/components/settlement/balance-overview'
 import SettlementProposal from '@/components/settlement/settlement-proposal'
+import SettlementRecord from '@/components/settlement/settlement-record'
 
 interface SettlementData {
   walletId: string
@@ -158,28 +159,11 @@ export default function SettlementPage({ params }: { params: Promise<{ id: strin
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <div className="space-y-4">
                   {settlement.existingSettlements.map((record: any) => (
-                    <div key={record.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <div>
-                          <p className="font-medium">
-                            {record.fromUser.name} → {record.toUser.name}
-                          </p>
-                          <p className="text-sm text-gray-600">
-                            {new Date(record.createdAt).toLocaleDateString('ja-JP')}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="text-right flex items-center space-x-3">
-                        <span className="font-bold text-lg">¥{record.amount.toLocaleString()}</span>
-                        <span className={`px-2 py-1 rounded-full text-xs ${
-                          record.isCompleted 
-                            ? 'bg-green-100 text-green-800' 
-                            : 'bg-yellow-100 text-yellow-800'
-                        }`}>
-                          {record.isCompleted ? '完了' : '未完了'}
-                        </span>
-                      </div>
-                    </div>
+                    <SettlementRecord 
+                      key={record.id} 
+                      record={record} 
+                      onStatusChange={() => fetchSettlement()}
+                    />
                   ))}
                 </div>
               </div>

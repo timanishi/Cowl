@@ -186,8 +186,8 @@ export async function DELETE(
         }
       },
       include: {
-        payments: true
-        // settlements: true  // TODO: Enable after migration
+        payments: true,
+        settlements: true
       }
     })
 
