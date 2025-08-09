@@ -120,12 +120,13 @@ export default function ContactPage() {
         </form>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">その他の連絡方法</h2>
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">お返事について</h2>
           <div className="space-y-2 text-gray-600">
-            <p>緊急性の高い問題については、以下の方法でもご連絡いただけます：</p>
+            <p>お問い合わせいただいた内容については、以下の通りお返事いたします：</p>
             <ul className="list-disc ml-6">
-              <li>メール: support@cowl-app.com（仮）</li>
+              <li>お問い合わせフォームからのご連絡のみ受け付けています</li>
               <li>通常のお返事までの期間: 1-3営業日</li>
+              <li>緊急性の高い問題も、こちらのフォームからご連絡ください</li>
             </ul>
           </div>
         </div>
