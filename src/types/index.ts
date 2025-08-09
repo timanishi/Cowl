@@ -24,7 +24,7 @@ export interface PaymentParticipant {
 export interface Payment {
   id: string
   amount: number
-  description: string
+  description: string | null
   category?: string | null
   payerId: string
   createdAt: string | Date
@@ -58,7 +58,7 @@ export interface MemberForForm {
 export interface PaymentForForm {
   id: string
   amount: number
-  description: string
+  description: string | null
   category?: string
   payerId: string
   payer: {

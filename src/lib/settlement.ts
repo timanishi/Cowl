@@ -12,7 +12,7 @@ export interface MemberBalance {
 export interface Payment {
   id: string
   amount: number
-  description: string
+  description: string | null
   category?: string | null
   createdAt: string | Date
   payer: {
