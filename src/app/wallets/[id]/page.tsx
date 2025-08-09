@@ -17,6 +17,7 @@ import {
   safeUserName, 
   safeUserImage 
 } from '@/types'
+import Footer from '@/components/ui/footer'
 
 export default function WalletDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { data: session, status } = useSession()
@@ -138,7 +139,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
   if (!wallet) return null
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 w-full">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-4">
@@ -172,7 +173,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
+      <main className="flex-1 max-w-4xl mx-auto px-4 py-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Wallet Info */}
           <div className="lg:col-span-1 space-y-6">
@@ -394,6 +395,7 @@ export default function WalletDetailPage({ params }: { params: Promise<{ id: str
           }}
         />
       )}
+      <Footer />
     </div>
   )
 }

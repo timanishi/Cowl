@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import CreateWalletModal from '@/components/wallet/create-wallet-modal'
+import Footer from '@/components/ui/footer'
 
 interface Wallet {
   id: string
@@ -74,7 +75,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 w-full">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-4">
@@ -108,7 +109,7 @@ export default function Dashboard() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
+      <main className="flex-1 max-w-4xl mx-auto px-4 py-8 w-full">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-xl font-semibold text-gray-900">
             マイウォレット
@@ -182,6 +183,7 @@ export default function Dashboard() {
           onSuccess={fetchWallets}
         />
       </main>
+      <Footer />
     </div>
   )
 }

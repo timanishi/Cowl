@@ -1,6 +1,9 @@
+import Footer from "@/components/ui/footer";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 px-4 py-16">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-indigo-100">
+    <main className="flex-1 px-4 py-16">
       <div className="max-w-md mx-auto text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Cowl
@@ -43,7 +46,10 @@ export default function Home() {
             </ul>
           </div>
         </div>
+
       </div>
     </main>
+    <Footer />
+    </div>
   )
 }

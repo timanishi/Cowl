@@ -3,6 +3,7 @@
 import { signIn, getSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import Footer from '@/components/ui/footer'
 
 export default function SignIn() {
   const router = useRouter()
@@ -37,7 +38,8 @@ export default function SignIn() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 flex items-center justify-center px-4">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-indigo-100">
+      <main className="flex-1 flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
@@ -90,6 +92,8 @@ export default function SignIn() {
           </div>
         </div>
       </div>
+      </main>
+      <Footer />
     </div>
   )
 }

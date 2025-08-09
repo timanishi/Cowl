@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Providers from "@/components/providers/session-provider";
+import { GoogleAdSense } from "@/components/adsense/google-adsense";
 
 export const metadata: Metadata = {
   title: "Cowl - 共用ウォレット",
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icons/cowl-icon.svg",
     apple: "/icons/cowl-icon.svg",
+  },
+  verification: {
+    google: "your-google-site-verification-code-here"
   },
 };
 
@@ -42,6 +46,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <GoogleAdSense />
         <script dangerouslySetInnerHTML={{
           __html: `
             if ('serviceWorker' in navigator) {

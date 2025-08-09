@@ -7,6 +7,7 @@ import Link from 'next/link'
 import BalanceOverview from '@/components/settlement/balance-overview'
 import SettlementProposal from '@/components/settlement/settlement-proposal'
 import SettlementRecord from '@/components/settlement/settlement-record'
+import Footer from '@/components/ui/footer'
 
 interface SettlementData {
   walletId: string
@@ -111,7 +112,7 @@ export default function SettlementPage({ params }: { params: Promise<{ id: strin
   if (!settlement) return null
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 w-full">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-4">
@@ -133,7 +134,7 @@ export default function SettlementPage({ params }: { params: Promise<{ id: strin
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
+      <main className="flex-1 max-w-4xl mx-auto px-4 py-8 w-full">
         <div className="space-y-8">
           {/* ページタイトル */}
           <div>
@@ -219,6 +220,7 @@ export default function SettlementPage({ params }: { params: Promise<{ id: strin
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

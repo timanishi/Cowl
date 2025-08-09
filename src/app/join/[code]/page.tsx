@@ -4,6 +4,7 @@ import { useSession, signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Footer from '@/components/ui/footer'
 
 interface WalletInfo {
   id: string
@@ -135,7 +136,8 @@ export default function JoinWalletPage({ params }: { params: Promise<{ code: str
   if (!wallet) return null
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 flex items-center justify-center px-4">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-indigo-100">
+      <main className="flex-1 flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-6">
@@ -237,6 +239,8 @@ export default function JoinWalletPage({ params }: { params: Promise<{ code: str
           )}
         </div>
       </div>
+      </main>
+      <Footer />
     </div>
   )
 }
