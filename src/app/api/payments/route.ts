@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
       participants
     } = await request.json()
 
-    if (!walletId || !description || !amount || !payerId || !participants || participants.length === 0) {
+    if (!walletId || !amount || !payerId || !participants || participants.length === 0) {
       return NextResponse.json(
         { message: '必須項目が不足しています' },
         { status: 400 }
@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
       const newPayment = await tx.payment.create({
         data: {
           walletId,
-          description,
+          description: description || '',
           amount,
           category: category || null,
           payerId,

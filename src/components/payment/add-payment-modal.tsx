@@ -51,7 +51,7 @@ export default function AddPaymentModal({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    if (!formData.description.trim() || !formData.amount || selectedMembers.length === 0) {
+    if (!formData.amount || selectedMembers.length === 0) {
       setError('必須項目を入力してください')
       return
     }
@@ -65,10 +65,12 @@ export default function AddPaymentModal({
     let finalParticipants: PaymentParticipant[]
     
     if (splitType === 'equal') {
-      const splitAmount = Math.round(amount / selectedMembers.length)
-      finalParticipants = selectedMembers.map(userId => ({
+      const baseAmount = Math.floor(amount / selectedMembers.length)
+      const remainder = amount - (baseAmount * selectedMembers.length)
+      
+      finalParticipants = selectedMembers.map((userId, index) => ({
         userId,
-        amount: splitAmount
+        amount: index === selectedMembers.length - 1 ? baseAmount + remainder : baseAmount
       }))
     } else {
       const totalCustomAmount = participants.reduce((sum, p) => sum + p.amount, 0)
@@ -90,7 +92,7 @@ export default function AddPaymentModal({
         },
         body: JSON.stringify({
           walletId,
-          description: formData.description.trim(),
+          description: formData.description.trim() || null,
           amount,
           category: formData.category || null,
           payerId: formData.payerId,
@@ -148,7 +150,13 @@ export default function AddPaymentModal({
   const getParticipantAmount = (userId: string): number => {
     if (splitType === 'equal') {
       const amount = parseFloat(formData.amount) || 0
-      return selectedMembers.length > 0 ? Math.round(amount / selectedMembers.length) : 0
+      if (selectedMembers.length === 0) return 0
+      
+      const baseAmount = Math.floor(amount / selectedMembers.length)
+      const remainder = amount - (baseAmount * selectedMembers.length)
+      const userIndex = selectedMembers.indexOf(userId)
+      
+      return userIndex === selectedMembers.length - 1 ? baseAmount + remainder : baseAmount
     } else {
       return participants.find(p => p.userId === userId)?.amount || 0
     }
@@ -179,21 +187,6 @@ export default function AddPaymentModal({
               </div>
             )}
 
-            {/* Description */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                支払い内容 *
-              </label>
-              <input
-                type="text"
-                value={formData.description}
-                onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-                placeholder="例: ランチ代"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
-                required
-              />
-            </div>
-
             {/* Amount */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -208,6 +201,20 @@ export default function AddPaymentModal({
                 step="1"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 required
+              />
+            </div>
+
+            {/* Description */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                支払い内容
+              </label>
+              <input
+                type="text"
+                value={formData.description}
+                onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+                placeholder="例: ランチ代"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
               />
             </div>
 
@@ -261,7 +268,7 @@ export default function AddPaymentModal({
                     onChange={(e) => setSplitType(e.target.value as 'equal')}
                     className="mr-2"
                   />
-                  <span className="text-sm text-gray-800">均等割り</span>
+                  <span className="text-sm text-gray-900">均等割り</span>
                 </label>
                 <label className="flex items-center">
                   <input
@@ -271,7 +278,7 @@ export default function AddPaymentModal({
                     onChange={(e) => setSplitType(e.target.value as 'custom')}
                     className="mr-2"
                   />
-                  <span className="text-sm text-gray-800">カスタム分割</span>
+                  <span className="text-sm text-gray-900">カスタム分割</span>
                 </label>
               </div>
             </div>
@@ -293,13 +300,13 @@ export default function AddPaymentModal({
                           onChange={() => handleMemberToggle(member.user.id)}
                           className="mr-3"
                         />
-                        <span className="text-sm text-gray-800">{member.user.name}</span>
+                        <span className="text-sm text-gray-900">{member.user.name}</span>
                       </label>
                       
                       {isSelected && (
                         <div className="ml-3">
                           {splitType === 'equal' ? (
-                            <span className="text-sm text-gray-700">
+                            <span className="text-sm text-gray-900">
                               ¥{getParticipantAmount(member.user.id).toLocaleString()}
                             </span>
                           ) : (
@@ -321,7 +328,7 @@ export default function AddPaymentModal({
               </div>
               
               {splitType === 'custom' && selectedMembers.length > 0 && (
-                <div className="mt-2 p-2 bg-gray-50 rounded text-sm text-gray-800">
+                <div className="mt-2 p-2 bg-gray-50 rounded text-sm text-gray-900">
                   <div className="flex justify-between">
                     <span>合計:</span>
                     <span>¥{participants.reduce((sum, p) => sum + p.amount, 0).toLocaleString()}</span>
@@ -339,7 +346,7 @@ export default function AddPaymentModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="flex-1 bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
+                className="flex-1 bg-gray-200 text-gray-900 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
                 disabled={loading}
               >
                 キャンセル
