@@ -3,6 +3,9 @@
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { MemberForForm } from '@/types'
+import { LoadingButton } from '@/components/ui/loading'
+import { useSuccessToast, useErrorToast } from '@/components/ui/toast'
+import { handleApiError } from '@/lib/error-handler'
 
 interface AddPaymentModalProps {
   isOpen: boolean
@@ -27,6 +30,8 @@ export default function AddPaymentModal({
   const { data: session } = useSession()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const showSuccess = useSuccessToast()
+  const showError = useErrorToast()
   
   const [formData, setFormData] = useState({
     description: '',
@@ -101,15 +106,20 @@ export default function AddPaymentModal({
       })
 
       if (response.ok) {
+        showSuccess('支払いを追加しました')
         onPaymentAdded()
         onClose()
         resetForm()
       } else {
         const data = await response.json()
-        setError(data.message || '支払いの追加に失敗しました')
+        const errorInfo = handleApiError(data)
+        setError(errorInfo.message)
+        showError(errorInfo.message)
       }
     } catch (error) {
-      setError('ネットワークエラーが発生しました')
+      const errorInfo = handleApiError(error)
+      setError(errorInfo.message)
+      showError(errorInfo.message)
     } finally {
       setLoading(false)
     }
@@ -351,13 +361,14 @@ export default function AddPaymentModal({
               >
                 キャンセル
               </button>
-              <button
+              <LoadingButton
                 type="submit"
-                disabled={loading || selectedMembers.length === 0}
+                loading={loading}
+                disabled={selectedMembers.length === 0}
                 className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
               >
-                {loading ? '追加中...' : '支払いを追加'}
-              </button>
+                支払いを追加
+              </LoadingButton>
             </div>
           </form>
         </div>
