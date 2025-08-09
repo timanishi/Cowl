@@ -74,7 +74,7 @@ export async function GET(
     }
 
     // 精算状況を計算
-    const settlementStatus = getSettlementStatus(wallet)
+    const settlementStatus = getSettlementStatus(wallet as any)
 
     // 既存の精算記録を取得
     let existingSettlements: any[] = []
