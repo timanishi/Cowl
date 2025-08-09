@@ -16,9 +16,6 @@ export const metadata: Metadata = {
     icon: "/icons/cowl-icon.svg",
     apple: "/icons/cowl-icon.svg",
   },
-  verification: {
-    google: "your-google-site-verification-code-here"
-  },
 };
 
 export const viewport: Viewport = {
