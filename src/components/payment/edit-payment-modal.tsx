@@ -52,7 +52,7 @@ export default function EditPaymentModal({
   useEffect(() => {
     if (payment && isOpen) {
       setFormData({
-        description: payment.description,
+        description: payment.description || '',
         amount: payment.amount.toString(),
         category: payment.category || '',
         payerId: payment.payerId
